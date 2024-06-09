@@ -1,9 +1,11 @@
-"use client"
-import React, { useEffect, useRef } from 'react';
+"use client";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../globals.css"
-import Link from 'next/link';
+import "../globals.css";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Services from "@/components/home/Services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,11 +25,11 @@ const Home: React.FC = () => {
       fn: (e: Event) => void,
       opts?: boolean | AddEventListenerOptions
     ) => {
-      function onceFn (e: Event) {
+      function onceFn(e: Event) {
         el?.removeEventListener(event, onceFn);
-        fn(e)
+        fn(e);
         // fn.apply(this:, arguments as any);
-      };
+      }
       el?.addEventListener(event, onceFn, opts);
       return onceFn;
     };
@@ -58,51 +60,38 @@ const Home: React.FC = () => {
     /* When first coded, the Blobbing was important to ensure the browser wasn't dropping previously played segments, but it doesn't seem to be a problem now. Possibly based on memory availability? */
     setTimeout(() => {
       // if (window.fetch) {
-        fetch(src)
-          .then((response) => response.blob())
-          .then((response) => {
-            const blobURL = URL.createObjectURL(response);
+      fetch(src)
+        .then((response) => response.blob())
+        .then((response) => {
+          const blobURL = URL.createObjectURL(response);
 
-            const t = video.currentTime;
-            once(document.documentElement, "touchstart", (e: Event) => {
-              video.play();
-              video.pause();
-            });
-
-            video.setAttribute("src", blobURL);
-            video.currentTime = t + 1;
+          const t = video.currentTime;
+          once(document.documentElement, "touchstart", (e: Event) => {
+            video.play();
+            video.pause();
           });
+
+          video.setAttribute("src", blobURL);
+          video.currentTime = t + 1;
+        });
       // }
     }, 1);
   }, []);
 
   return (
     <>
-     <nav className="p-3 flex bg-white justify-between items-center z-80">
-     <Link href={"#"} id="brand" className="flex gap-2 items-center text-black">XXX Agency</Link>
-       <div id="nav-menu" className="hidden md:flex gap-12">
-         <Link href={"#"} className="text-black font-medium hover:text-blue">Home</Link>
-         <Link href={"#"} className="text-black font-medium hover:text-blue">Services</Link>
-         <Link href={"#"} className="text-black font-medium hover:text-blue">About-Us</Link>
-         <Link href={"#"} className="text-black font-medium hover:text-blue">Contact-Us</Link>
-       </div>
-       <button className="p-2 text-black hidden md:block border border-gray-400 border-r-2 border-b-2 rounded-lg hover:border-gray-800">
-         Strart Project
-       </button>
-       <button className="p-2 text-black md:hidden">
-         menu
-       </button>
-     </nav>
-    <video
-      ref={videoRef}
-      src="../enc.mp4"
-      playsInline
-      webkit-playsinline="true"
-      preload="auto"
-      muted
-      className="video-background"
-    />
-    <div id="container"></div>
+      <Navbar />
+      <Services />
+      <video
+        ref={videoRef}
+        src="../enc.mp4"
+        playsInline
+        webkit-playsinline="true"
+        preload="auto"
+        muted
+        className="video-background"
+      />
+      <div id="container"></div>
     </>
   );
 };
