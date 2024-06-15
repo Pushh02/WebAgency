@@ -6,12 +6,16 @@ import "../globals.css";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/home/Services";
+import WhatWeOffer from "@/components/home/WhatWeOffer";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
+  // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4
+  // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output_960.mp4
+  
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -81,17 +85,20 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Services />
       <video
         ref={videoRef}
-        src="../enc.mp4"
+        src="../output.mp4"
         playsInline
         webkit-playsinline="true"
         preload="auto"
         muted
         className="video-background"
       />
-      <div id="container"></div>
+      <div id="container">
+      <Services />
+      <WhatWeOffer />
+
+      </div>
     </>
   );
 };
