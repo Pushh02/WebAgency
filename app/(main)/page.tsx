@@ -7,6 +7,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/home/Services";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
+import HeroSection from "@/components/home/HeroSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,6 +96,7 @@ const Home: React.FC = () => {
         className="video-background"
       />
       <div id="container">
+      <HeroSection/>
       <Services />
       <WhatWeOffer />
 
