@@ -8,15 +8,15 @@ import Image from "next/image";
 
 const heading = "XXX Agency"
 const text = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, voluptatem.`
-  const splitStringUsingRegex = (inputString:string):string[]=>{
-    const characters:string[] = []
-    const regex = /[\s\s]/gu;
-    let match
-    while((match=regex.exec(inputString)) !== null){
-      characters.push(match[0])
-    }
-    return characters
-  }
+//   const splitStringUsingRegex = (inputString:string):string[]=>{
+//     const characters:string[] = []
+//     const regex = /[\s\s]/gu;
+//     let match
+//     while((match=regex.exec(inputString)) !== null){
+//       characters.push(match[0])
+//     }
+//     return characters
+//   }
   const headingChars = heading.split('')
   const textChars = text.split('') 
   const charVariants = {
