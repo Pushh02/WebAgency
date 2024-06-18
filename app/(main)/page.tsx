@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Services from "@/components/home/Services";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import HeroSection from "@/components/home/HeroSection";
+import Plans from "@/components/home/Plans";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,7 +100,7 @@ const Home: React.FC = () => {
       <HeroSection/>
       <Services />
       <WhatWeOffer />
-
+      <Plans/>
       </div>
     </>
   );
