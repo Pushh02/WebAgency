@@ -20,6 +20,8 @@ const WhatWeOffer = () => {
             What we offer
           </motion.h2>
         </div>
+
+        
       </div>
     </>
   );

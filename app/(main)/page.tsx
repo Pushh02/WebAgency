@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../globals.css";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/home/Services";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
@@ -85,11 +84,11 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <video
         ref={videoRef}
-        src="../output.mp4"
+        src="../output1.mp4"
         playsInline
         webkit-playsinline="true"
         preload="auto"
@@ -102,7 +101,7 @@ const Home: React.FC = () => {
       <WhatWeOffer />
       <Plans/>
       </div>
-    </>
+    </div>
   );
 };
 
