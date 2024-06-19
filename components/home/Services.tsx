@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ServiceCard from "../ui/ServiceCard";
+import "../../app/globals.css"
 
 const Services = () => {
   return (
@@ -26,7 +27,7 @@ const Services = () => {
           initial={{ x: -400, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className=" max-w-[60vw] text-center"
+          className="float-box max-w-[60vw] text-center"
         >
           <h3 className="text-3xl font-bold mb-4 text-dark-green">
             Description

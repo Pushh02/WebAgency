@@ -10,15 +10,17 @@ import HeroSection from "@/components/home/HeroSection";
 import Plans from "@/components/home/Plans";
 import Reviews from "@/components/home/Reviews";
 import HomeAbout from "@/components/home/HomeAbout";
+import { motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const { scrollYProgress } = useScroll();
   // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4
   // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output_960.mp4
-  
+
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -87,7 +89,10 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div id="scroll-progress" className="bg-orange-600 h-1 fixed top-0 left-0 z-50 p-1"/>
+      <motion.div
+        className="fixed top-0 left-0 right-0 origin-left h-1 bg-orange-700 z-50"
+        style={{ scaleX: scrollYProgress }}
+      />
       <Navbar />
       <video
         ref={videoRef}
@@ -99,12 +104,12 @@ const Home: React.FC = () => {
         className="video-background"
       />
       <div id="container">
-      <HeroSection/>
-      <Services />
-      <WhatWeOffer />
-      <Plans/>
-      <Reviews/>
-      <HomeAbout/>
+        <HeroSection />
+        <Services />
+        <WhatWeOffer />
+        <Plans />
+        <Reviews />
+        <HomeAbout />
       </div>
     </div>
   );
