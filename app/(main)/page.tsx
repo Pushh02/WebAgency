@@ -8,6 +8,8 @@ import Services from "@/components/home/Services";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import HeroSection from "@/components/home/HeroSection";
 import Plans from "@/components/home/Plans";
+import Reviews from "@/components/home/Reviews";
+import HomeAbout from "@/components/home/HomeAbout";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,10 +87,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <div id="scroll-progress" className="bg-orange-600 h-1 fixed top-0 left-0 z-50 p-1"/>
       <Navbar />
       <video
         ref={videoRef}
-        src="../output1.mp4"
+        src="../output.mp4"
         playsInline
         webkit-playsinline="true"
         preload="auto"
@@ -100,6 +103,8 @@ const Home: React.FC = () => {
       <Services />
       <WhatWeOffer />
       <Plans/>
+      <Reviews/>
+      <HomeAbout/>
       </div>
     </div>
   );

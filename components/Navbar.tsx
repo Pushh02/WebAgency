@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="p-3 flex bg-white justify-between items-center z-80">
+    <nav className="p-3 flex bg-[#ffffffa0] justify-between items-center z-80">
       <Link
         href={"#"}
         id="brand"
@@ -23,6 +23,7 @@ const Navbar = () => {
         <Link href={"#"} className="text-black font-medium hover:text-blue">
           Contact-Us
         </Link>
+        {/* <Store /> */}
       </div>
       <button className="p-2 text-black hidden md:block border border-gray-400 border-r-2 border-b-2 rounded-lg hover:border-gray-800">
         Start Project
