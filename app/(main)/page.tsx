@@ -8,12 +8,15 @@ import Services from "@/components/home/Services";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import HeroSection from "@/components/home/HeroSection";
 import Plans from "@/components/home/Plans";
+import { motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const { scrollYProgress } = useScroll();
   // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4
   // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output_960.mp4
   
@@ -85,6 +88,10 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <motion.div
+        className="fixed top-0 left-0 right-0 origin-left h-1 bg-orange-700 z-50"
+        style={{ scaleX: scrollYProgress }}
+      />
       <Navbar />
       <video
         ref={videoRef}

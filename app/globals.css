@@ -43,7 +43,7 @@ body {
 }
 
 #container {
-  height: 780vh;
+  height: 700vh;
 }
 
 /* css utube */
@@ -126,4 +126,26 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(3px, -3px);
+  }
+  50% {
+    transform: translate(-3px, 3px);
+  }
+  75% {
+    transform: translate(3px, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.float-box {
+  animation: float 7s ease-in-out infinite;
 }

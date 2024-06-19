@@ -62,11 +62,11 @@ const Plans = () => {
         {[1, 2, 3, 4, 5].map((item, idx) => {
           return (
             <motion.div
-              initial={{ x: 0 }}
-              animate={{ x: "-100%" }}
+              initial={{ x: 100 }}
+              animate={{ x: "-200%" }}
               transition={{ duration: 5, repeat:Infinity }}
               key={idx}
-              className="bg-[#273348] w-[40vh] h-[10vh] rounded-full flex items-center justify-center">
+              className="bg-[#273348] w-[40vh] h-[10vh] rounded-full flex items-center justify-center mx-5">
               Roshan Singh {idx+1}
             </motion.div>
           );
