@@ -81,7 +81,7 @@ const Home: React.FC = () => {
           });
 
           video.setAttribute("src", blobURL);
-          video.currentTime = t + 1;
+          video.currentTime = t + 0.1;
         });
       // }
     }, 1);

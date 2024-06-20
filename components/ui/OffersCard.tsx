@@ -26,7 +26,7 @@ const OffersCard = ({
     initial={{x: x, y: y, opacity: 0.3}}
     transition={{delay: delay, duration: 0.5}}
     whileInView={{x: 0, y: 0, opacity: 1}}
-    className={cn(" w-72 h-60 flex flex-col justify-center", color || "bg-transparent")}>
+    className={cn(" w-72 h-56 flex flex-col justify-center", color || "bg-transparent")}>
       <Image src={imgSrc} alt={imgAlt} className="mx-auto" />
       <p className="text-center">{description}</p>
     </motion.div>
