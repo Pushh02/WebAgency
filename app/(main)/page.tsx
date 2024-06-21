@@ -81,7 +81,7 @@ const Home: React.FC = () => {
           });
 
           video.setAttribute("src", blobURL);
-          video.currentTime = t + 0.1;
+          video.currentTime = t + 1;
         });
       // }
     }, 1);
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
       <Navbar />
       <video
         ref={videoRef}
-        src="../output.mp4"
+        src="../output4.mp4"
         playsInline
         webkit-playsinline="true"
         preload="auto"
