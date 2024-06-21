@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ReviewCard from "../ui/ReviewCard";
+
 const Reviews = () => {
   return (
     <main className="w-screen h-screen overflow-x-hidden mt-4">
@@ -18,13 +19,13 @@ const Reviews = () => {
           Reviews
         </motion.h2>
       </div>
-      <div className="flex justify-around items-center mt-10 flex-wrap gap-10">
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
+      <div className="flex justify-around items-center mt-10 flex-wrap overflow-scroll gap-10">
+        <ReviewCard Cname="Company Name" Clogo="Company Logo" rating={2} date={"20-06-2024"}/>
+        <ReviewCard Cname="Company Name" Clogo="Company Logo" rating={1} date={"20-06-2024"}/>
+        <ReviewCard Cname="Company Name" Clogo="Company Logo" rating={4} date={"20-06-2024"}/>
+        <ReviewCard Cname="Company Name" Clogo="Company Logo" rating={3} date={"20-06-2024"}/>
+        <ReviewCard Cname="Company Name" Clogo="Company Logo" rating={5} date={"20-06-2024"}/>
+        <ReviewCard Cname="Company Name" Clogo="Company Logo" rating={1} date={"20-06-2024"}/>
       </div>
     </main>
   );
