@@ -2,7 +2,7 @@ import Tilt from "react-parallax-tilt";
 
 const ServiceCard = () => {
     return ( 
-        <div className="h-36 w-56 relative mx-4">
+        <div className="h-36 w-56 relative mx-4 flex-none pt-7">
             <Tilt
               perspective={1000}
               glareEnable={true}

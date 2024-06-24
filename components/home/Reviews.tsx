@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ReviewCard from "../ui/ReviewCard";
+import ReviewCard from "../ui/cards/ReviewCard";
 
 const Reviews = () => {
   return (

@@ -11,13 +11,15 @@ const PlansCard = (props: { name: string; icon: ReactNode }) => {
       glareEnable={true}
       glareMaxOpacity={0.5}
       glareColor="#9e9e9e"
+      className="w-11/12 mb-4 md:mb-0"
       //   className="bg-greyish-blue pt-9 z-10 rounded-md"
-    >
+      >
       <motion.div
-        initial={{ x: -400 }}
+        initial={{ x: -200 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        className="bg-[#232D3F] max-w-md h-96 rounded-lg overflow-hidden shadow-lg bg-opacity-50">
+        className="bg-[#232D3F] h-fit rounded-lg overflow-hidden shadow-lg bg-opacity-50"
+      >
         {/* <img
         className="w-full"
         src="/img/card-top.jpg"

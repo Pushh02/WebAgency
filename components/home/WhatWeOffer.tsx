@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import OffersCard from "../ui/OffersCard";
+import OffersCard from "../ui/cards/OffersCard";
 import ML from "../../public/icons/ml.png";
 
 const WhatWeOffer = () => {
@@ -26,9 +26,9 @@ const WhatWeOffer = () => {
           </motion.h2>
         </div>
         <div className="h-full flex flex-col items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 p-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 p-4">
             <OffersCard
-              x={-400}
+              x={-100}
               y={0}
               delay={0.2}
               imgSrc={ML}
@@ -45,35 +45,36 @@ const WhatWeOffer = () => {
               description={desc}
             />
             <OffersCard
-              x={400}
+              x={100}
               y={0}
-              delay={0.4}
+              delay={0.2}
               imgSrc={ML}
               imgAlt="ML"
               description={desc}
-              color="bg-[#005b417d]"
+              color="md:bg-[#005b417d] bg-transparent"
             />
             <OffersCard
-              x={-400}
+              x={-100}
               y={0}
-              delay={0.6}
+              delay={0.2}
               imgSrc={ML}
               imgAlt="ML"
               description={desc}
+              color="md:bg-transparent bg-[#005b417d]"
             />
             <OffersCard
               x={0}
               y={-300}
-              delay={0.7}
+              delay={0.3}
               imgSrc={ML}
               imgAlt="ML"
               description={desc}
               color="bg-[#005b417d]"
             />
             <OffersCard
-              x={400}
+              x={100}
               y={0}
-              delay={0.8}
+              delay={0.2}
               imgSrc={ML}
               imgAlt="ML"
               description={desc}
