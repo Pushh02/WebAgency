@@ -109,6 +109,8 @@ html {
   display: none;
 }
 
+/* lenis */
+
 html.lenis, html.lenis body {
   height: auto;
 }
