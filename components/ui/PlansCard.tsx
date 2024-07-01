@@ -3,26 +3,14 @@ import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 import { ReactNode } from "react";
 
-const PlansCard = (props: { name: string; icon: ReactNode }) => {
+const PlansCard = (props: { name: string; icon: ReactNode, x:number, y:number}) => {
   // const observer = new IntersectionObserver()
   return (
-    <Tilt
-      perspective={1000}
-      glareEnable={true}
-      glareMaxOpacity={0.5}
-      glareColor="#9e9e9e"
-      //   className="bg-greyish-blue pt-9 z-10 rounded-md"
-    >
       <motion.div
-        initial={{ x: -400 }}
-        whileInView={{ x: 0 }}
-        transition={{ duration: 1 }}
-        className="bg-[#232D3F] max-w-md h-96 rounded-lg overflow-hidden shadow-lg bg-opacity-50">
-        {/* <img
-        className="w-full"
-        src="/img/card-top.jpg"
-        alt="Sunset in the mountains"
-      /> */}
+        initial={{ x: props.x,y:props.y, opacity:0 }}
+        whileInView={{ x: 0,y:0,opacity:1 }}
+        transition={{ duration: 1.5 }}
+        className="bg-[#232D3F] w-[500px] h-96 mt-5 rounded-lg overflow-hidden shadow-lg bg-opacity-50">
         <div className="px-6 py-4">
           <div className="flex justify-between items-center m-2">
             <div className="font-bold text-2xl mb-2 underline">
@@ -44,10 +32,8 @@ const PlansCard = (props: { name: string; icon: ReactNode }) => {
             className="py-2 px-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
             Buy Now
           </motion.button>
-          {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Buy Now</button> */}
         </div>
       </motion.div>
-    </Tilt>
   );
 };
 

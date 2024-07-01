@@ -21,12 +21,12 @@ const Plans = () => {
           Plans
         </motion.h2>
       </div>
-      <div className="flex justify-around items-center mt-10 ">
-        <PlansCard name={"Basic"} icon={<BsShop size={"3em"} className="m-auto p-1" />} />
-        <PlansCard name={"Advance"} icon={<BsBuildings size={"3em"} className="m-auto p-1" />} />
-        <PlansCard name={"Custom"} icon={<TbSettingsCode size={"3.2em"} className="m-auto p-1" />} />
+      <div className="flex justify-around items-center mt-10 flex-wrap">
+        <PlansCard name={"Basic"} x={-250} y={0} icon={<BsShop size={"3em"} className="m-auto p-1" />} />
+        <PlansCard name={"Advance"} x={-200} y={0} icon={<BsBuildings size={"3em"} className="m-auto p-1" />} />
+        <PlansCard name={"Custom"} x={-150} y={0} icon={<TbSettingsCode size={"3.2em"} className="m-auto p-1" />} />
       </div>
-      <div className="bg-[#005b41b9] mt-[5%] h-[20vh] flex justify-evenly items-center">
+      <div className="bg-[#005b41b9] mt-10 h-32 flex justify-evenly items-center">
         {[1, 2, 3, 4, 5,6,7,8,9].map((item, idx) => {
           return (
             <motion.div
@@ -34,7 +34,7 @@ const Plans = () => {
               animate={{ x: "-1000%" }}
               transition={{ duration: 15, repeat:Infinity }}
               key={idx}
-              className="bg-[#3a4f72] w-[40vh] h-[10vh] rounded-full flex items-center justify-center m-2">
+              className="bg-[#3a4f72] w-40 h-16 rounded-full flex items-center justify-center m-2">
               Roshan Singh {idx+1}
             </motion.div>
           );

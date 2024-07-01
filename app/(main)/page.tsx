@@ -12,6 +12,7 @@ import Reviews from "@/components/home/Reviews";
 import HomeAbout from "@/components/home/HomeAbout";
 import { motion } from "framer-motion";
 import { useScroll } from "framer-motion";
+import Footer from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,7 +27,6 @@ const Home: React.FC = () => {
     if (!video) return;
 
     const src = video.currentSrc || video.src;
-    console.log(video, src);
 
     const once = (
       el: EventTarget | null,
@@ -110,6 +110,7 @@ const Home: React.FC = () => {
         <Plans />
         <Reviews />
         <HomeAbout />
+        <Footer/>
       </div>
     </div>
   );

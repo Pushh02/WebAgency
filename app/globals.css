@@ -40,10 +40,11 @@ body {
   min-height: 100%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  object-fit: cover;
 }
 
 #container {
-  height: 700vh;
+  height: 652vh;
 }
 
 /* css utube */
@@ -148,4 +149,57 @@ html.lenis, html.lenis body {
 
 .float-box {
   animation: float 7s ease-in-out infinite;
+}
+
+
+
+/* About css */
+.about span{
+  --total:calc(var(--duration) + var(--delay));
+  position: relative;
+  /* display: block; */
+  /* color: transparent; */
+  overflow: hidden;
+  animation: revealText 1s
+  var(--total) forwards;
+}
+
+.about span ::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #bb93fc;
+  opacity: 0;
+  animation:
+  rollIn var(--duration)
+  var(--delay) forwards,
+  rollOut var(--duration)
+  var(--total) forwards;
+}
+
+@keyframes revealText{
+  to{
+    color: #00FFA3;
+  }
+}
+@keyframes rollIn {
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+@keyframes rollOut {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(105%);
+  }
 }
