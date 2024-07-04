@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import HamburgerIcon from "./ui/HamburgerIcon";
 import { useState } from "react";
@@ -31,7 +33,7 @@ const Navbar = () => {
         </Link>
         {/* <Store /> */}
       </div>
-      <button className="p-2 text-black hidden md:block border border-gray-400 border-r-2 border-b-2 rounded-lg hover:border-gray-800">
+      <button className="p-2 text-black hidden md:block border border-gray-600 border-r-2 border-b-2 rounded-lg hover:border-gray-800">
         Start Project
       </button>
       <button
