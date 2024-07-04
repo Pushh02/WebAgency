@@ -44,7 +44,7 @@ body {
 }
 
 #container {
-  height: 652vh;
+  height: fit-content;
 }
 
 /* css utube */
