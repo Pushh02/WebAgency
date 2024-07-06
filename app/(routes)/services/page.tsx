@@ -4,7 +4,9 @@ const Services = () => {
   return (
     <div className="my-8">
       <h1 className="text-4xl text-center mb-8">Our Services</h1>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center gap-y-8">
+        <ServicesPageCard />
+        <ServicesPageCard />
         <ServicesPageCard />
       </div>
     </div>
