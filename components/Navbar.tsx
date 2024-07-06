@@ -19,16 +19,16 @@ const Navbar = () => {
         XXX Agency
       </Link>
       <div id="nav-menu" className="hidden md:flex gap-x-12">
-        <Link href={"#"} className="text-black font-medium hover:text-blue">
+        <Link href={"/"} className="text-black font-medium hover:text-blue">
           Home
         </Link>
-        <Link href={"#"} className="text-black font-medium hover:text-blue">
+        <Link href={"/services"} className="text-black font-medium hover:text-blue">
           Services
         </Link>
-        <Link href={"#"} className="text-black font-medium hover:text-blue">
+        <Link href={"/aboutus"} className="text-black font-medium hover:text-blue">
           About-Us
         </Link>
-        <Link href={"#"} className="text-black font-medium hover:text-blue">
+        <Link href={"/contact"} className="text-black font-medium hover:text-blue">
           Contact-Us
         </Link>
         {/* <Store /> */}

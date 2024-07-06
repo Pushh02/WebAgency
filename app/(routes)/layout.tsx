@@ -7,11 +7,11 @@ const Layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <>
+    <main className="bg-bg-image bg-cover ">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </main>
   );
 };
 

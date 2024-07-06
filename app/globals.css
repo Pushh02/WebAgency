@@ -205,3 +205,13 @@ html.lenis, html.lenis body {
     transform: translateX(105%);
   }
 }
+
+
+/* to remove arrow from number type input */
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
