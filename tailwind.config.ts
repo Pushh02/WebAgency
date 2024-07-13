@@ -18,7 +18,10 @@ const config: Config = {
         "greyish-blue": "#232D3F",
         "dark-green": "#005B41",
         "green": "#008170"
-      }
+      },
+      boxShadow:{
+        "contact-box": "rgba(0, 0, 0, 0.4) 0px 30px 90px;",
+      },
     },
   },
   plugins: [],
