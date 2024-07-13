@@ -20,8 +20,8 @@ const config: Config = {
         "green": "#008170"
       },
       boxShadow:{
-        "contact-box": "rgba(0, 0, 0, 0.4) 0px 30px 90px;",
-      },
+        "contact-box1": "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;",
+      }
     },
   },
   plugins: [],

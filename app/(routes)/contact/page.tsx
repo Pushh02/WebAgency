@@ -29,7 +29,7 @@ const Contact = () => {
       <div className="absolute mt-12 -ml-24 bg-slate-400 pl-2 pr-2 rounded-lg w-fit">
         <h1 className="text-lg text-black">Write us to connect</h1>
       </div>
-      <div className="bg-[#ffffff49] mt-6 -ml-24 p-16 rounded-lg  shadow-contact-box shadow-white">
+      <div className="bg-[#ffffff49] mt-6 -ml-24 p-16 rounded-lg  shadow-contact-box1 shadow-gray-400 ">
         <div>
           {/* form */}
           <form id="contact" className="w-full max-w-lg">
@@ -157,7 +157,7 @@ const Contact = () => {
       <MdConnectWithoutContact
         onClick={handleContact}
         id="contact-button"
-        className="cursor-pointer block absolute right-20 bottom-20 bg-[#6639c7a8] rounded-full p-2 shadow-lg shadow-white"
+        className="cursor-pointer block absolute right-20 bottom-20 bg-[#824df3ae] rounded-full p-2 shadow-contact-box1 shadow-gray-400"
         size={70}
       />
 

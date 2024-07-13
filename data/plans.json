@@ -1,0 +1,41 @@
+{
+  "Esential": {
+    "services": [
+      "UI/UX design",
+      "Frontend development",
+      "Up to 4 pages",
+      "Hosting",
+      "WordPress / custom technology"
+    ],
+    "price": 15000
+  },
+  "Advanced": {
+    "services": [
+      "UI/UX design",
+      "Frontend development",
+      "Backend development",
+      "Database Integration",
+      "Payment integration",
+      "Up to 10 pages",
+      "Free 1 year domain up to rupees 1.5k",
+      "Hosting",
+      "DDOS protection and mitigation"
+    ],
+    "price": 50000
+  },
+  "Custom": {
+    "services": [
+      "Services according to you needs (Choose any)",
+      "UI/UX design",
+      "Frontend development",
+      "Backend development ",
+      "Database Integration",
+      "Payment integration",
+      "Hosting",
+      "DDOS protection and mitigation",
+      "ML",
+      "ChatGPT integration"
+    ],
+    "price":"Depends on your need"
+  }
+}
