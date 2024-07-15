@@ -15,17 +15,33 @@ const Reviews = () => {
           initial={{ opacity: 0.5, y: -20 }}
           transition={{ duration: 0.2 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl">
+          className="text-4xl"
+        >
           Reviews
         </motion.h2>
       </div>
       <div className="w-full h-full flex justify-around items-center flex-wrap overflow-scroll relative">
-        <ReviewCard Cname="Company Name1" Clogo="Company Logo" rating={2} date={"20-06-2024"} d={0}/>
-        <ReviewCard Cname="Company Name2" Clogo="Company Logo" rating={1} date={"20-06-2024"} d={0.2}/>
-        <ReviewCard Cname="Company Name3" Clogo="Company Logo" rating={4} date={"20-06-2024"} d={0.4}/>
-        {/* <ReviewCard Cname="Company Name4" Clogo="Company Logo" rating={3} date={"20-06-2024"} d={0.6}/>
-        <ReviewCard Cname="Company Name5" Clogo="Company Logo" rating={5} date={"20-06-2024"} d={0.8}/>
-        <ReviewCard Cname="Company Name6" Clogo="Company Logo" rating={1} date={"20-06-2024"} d={1}/> */}
+        <ReviewCard
+          Cname="Company Name1"
+          Clogo="Company Logo"
+          rating={2}
+          date={"20-06-2024"}
+          d={0}
+        />
+        <ReviewCard
+          Cname="Company Name2"
+          Clogo="Company Logo"
+          rating={1}
+          date={"20-06-2024"}
+          d={0.2}
+        />
+        <ReviewCard
+          Cname="Company Name3"
+          Clogo="Company Logo"
+          rating={4}
+          date={"20-06-2024"}
+          d={0.4}
+        />
       </div>
     </main>
   );

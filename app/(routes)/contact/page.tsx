@@ -6,8 +6,11 @@ import { IoCloseCircle } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoCall } from "react-icons/io5";
 import Link from "next/link";
+import { useState } from "react";
 
 const Contact = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const form = document.getElementById("contact") as HTMLFormElement;
@@ -17,19 +20,14 @@ const Contact = () => {
       console.log(k, " :: ", v);
     });
   };
-  const handleContact = () => {
-    const button = document.getElementById("contact-button");
-    const div = document.getElementById("contact-div");
-    button?.classList.toggle("hidden");
-    div?.classList.toggle("hidden");
-  };
+
   return (
-    <main className="w-screen h-screen flex justify-start items-center flex-col pt-10">
-      <h1 className="text-4xl font-extrabold">Contact Us</h1>
-      <div className="absolute mt-12 -ml-24 bg-slate-400 pl-2 pr-2 rounded-lg w-fit">
-        <h1 className="text-lg text-black">Write us to connect</h1>
-      </div>
-      <div className="bg-[#ffffff49] mt-6 -ml-24 p-16 rounded-lg  shadow-contact-box1 shadow-gray-400 ">
+    <main className="w-screen pt-10">
+      <h1 className="text-4xl font-extrabold text-center">Contact Us</h1>
+      <div className="bg-[#ffffff49] my-12 p-16 w-3/4 md:w-3/5 mx-auto rounded-lg relative shadow-contact-box1 shadow-gray-400 ">
+        <div className="absolute bg-slate-400 -top-4 left-1/2 transform -translate-x-1/2 px-2  rounded-lg w-fit">
+          <h1 className="text-lg text-black">Write us to connect</h1>
+        </div>
         <div>
           {/* form */}
           <form id="contact" className="w-full max-w-lg">
@@ -90,7 +88,8 @@ const Contact = () => {
                   rows={3}
                   placeholder="Whats on your mind..."
                   name="message"
-                  className="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
+                  className="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                ></textarea>
               </div>
             </div>
 
@@ -138,13 +137,13 @@ const Contact = () => {
                 Website Hosting and Maintenance
               </label>
             </div>
-            
 
             <div className="flex flex-wrap mt-8 -mb-6 place-content-center">
               <div className="w-1/3">
                 <button
                   onClick={handleSubmit}
-                  className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-full">
+                  className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-full"
+                >
                   Submit
                 </button>
               </div>
@@ -154,75 +153,78 @@ const Contact = () => {
       </div>
       {/*  */}
 
-      <MdConnectWithoutContact
-        onClick={handleContact}
-        id="contact-button"
-        className="cursor-pointer block absolute right-20 bottom-20 bg-[#824df3ae] rounded-full p-2 shadow-contact-box1 shadow-gray-400"
-        size={70}
-      />
-
       {/*  */}
       <AnimatePresence>
-        <motion.div
-          initial={{ translateY: 50, opacity: 0 }}
-          whileInView={{ translateY: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          exit={{ translateY: -50, opacity: 0 }}
-          id="contact-div"
-          className="hidden w-[22rem] h-fit px-8 py-8 ml-auto bg-[#6639c7a8] rounded-3xl mr-2 absolute bottom-4 right-4">
-          <IoCloseCircle
-            onClick={handleContact}
-            className="cursor-pointer absolute right-2 top-2"
-            color={"gray"}
-            size={30}
+        {!isOpen ? (
+          <MdConnectWithoutContact
+            onClick={() => setIsOpen(true)}
+            id="contact-button"
+            className="cursor-pointer sticky left-[90%] bottom-10 bg-[#824df3ae] rounded-full p-2 shadow-gray-400"
+            size={70}
           />
-          <div className="flex flex-col text-white">
-            <h1 className="font-bold uppercase text-2xl my-2">
-              Drop in our office
-            </h1>
-            <p className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              tincidunt arcu diam, eu feugiat felis fermentum id. Curabitur
-              vitae nibh viverra, auctor turpis sed, scelerisque ex.
-            </p>
+        ) : (
+          <motion.div
+            initial={{ translateY: 50, opacity: 0 }}
+            whileInView={{ translateY: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            exit={{ translateY: -50, opacity: 0 }}
+            id="contact-div"
+            className="hidden w-[22rem] h-fit px-8 py-8 ml-auto bg-[#6639c7a8] rounded-3xl mr-2 absolute bottom-4 right-4"
+          >
+            <IoCloseCircle
+              onClick={() => setIsOpen(false)}
+              className="cursor-pointer absolute right-2 top-2"
+              color={"gray"}
+              size={30}
+            />
+            <div className="flex flex-col text-white">
+              <h1 className="font-bold uppercase text-2xl my-2">
+                Drop in our office
+              </h1>
+              <p className="text-gray-400">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                tincidunt arcu diam, eu feugiat felis fermentum id. Curabitur
+                vitae nibh viverra, auctor turpis sed, scelerisque ex.
+              </p>
 
-            <div className="flex my-2 w-2/3">
-              <div className="flex flex-col">
-                <i className="fas fa-map-marker-alt pt-2 pr-2" />
+              <div className="flex my-2 w-2/3">
+                <div className="flex flex-col">
+                  <i className="fas fa-map-marker-alt pt-2 pr-2" />
+                </div>
+                <div className="flex flex-col">
+                  <h2 className="text-xl">Email Us</h2>
+                  <p className="text-gray-400 text-lg flex my-1">
+                    <Link href={"mailto:roshan.2002kumr@mail.com"}>
+                      <BiLogoGmail className="mr-2" size={25} />
+                    </Link>{" "}
+                    roshan.2002kumr@mail.com
+                  </p>
+                  <p className="text-gray-400 text-lg flex my-1">
+                    <Link href={"mailto:pushkarkamble23@mail.com"}>
+                      <BiLogoGmail className="mr-2" size={25} />
+                    </Link>
+                    pushkarkamble23@mail.com
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <h2 className="text-xl">Email Us</h2>
-                <p className="text-gray-400 text-lg flex my-1">
-                  <Link href={"mailto:roshan.2002kumr@mail.com"}>
-                    <BiLogoGmail className="mr-2" size={25} />
-                  </Link>{" "}
-                  roshan.2002kumr@mail.com
-                </p>
-                <p className="text-gray-400 text-lg flex my-1">
-                  <Link href={"mailto:pushkarkamble23@mail.com"}>
-                    <BiLogoGmail className="mr-2" size={25} />
-                  </Link>
-                  pushkarkamble23@mail.com
-                </p>
+
+              <div className="flex my-2 w-3/4">
+                <div className="flex flex-col">
+                  <i className="fas fa-phone-alt pt-2 pr-2" />
+                </div>
+                <div className="flex flex-col">
+                  <h2 className="text-xl">Call Us</h2>
+                  <p className="text-gray-400 text-lg flex my-1">
+                    <IoCall className="mr-2" size={25} /> 7738121979
+                  </p>
+                  <p className="text-gray-400 text-lg flex my-1">
+                    <IoCall className="mr-2" size={25} /> 9140898642
+                  </p>
+                </div>
               </div>
             </div>
-
-            <div className="flex my-2 w-3/4">
-              <div className="flex flex-col">
-                <i className="fas fa-phone-alt pt-2 pr-2" />
-              </div>
-              <div className="flex flex-col">
-                <h2 className="text-xl">Call Us</h2>
-                <p className="text-gray-400 text-lg flex my-1">
-                  <IoCall className="mr-2" size={25} /> 7738121979
-                </p>
-                <p className="text-gray-400 text-lg flex my-1">
-                  <IoCall className="mr-2" size={25} /> 9140898642
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
     </main>
   );

@@ -18,7 +18,7 @@ const HomeAbout = () => {
         </motion.h2>
       </div>
       <div
-        className="p-10 m-20 bg-[#232d3faf] text-3xl">
+        className="p-10 m-20 bg-[#232d3faf] text-xl xl:text-3xl">
         <p className="about" style={{"--duration":"1s"} as React.CSSProperties}>
         Welcome to <span style={{"--delay":"1s"} as React.CSSProperties}>[Agency Name]</span>, where we turn your digital dreams into reality. {"We're"} not just another
         web development and deployment agency. {"We're"} your{" "} <span style={{"--delay":"1s"} as React.CSSProperties}>dedicated partner</span> in building
