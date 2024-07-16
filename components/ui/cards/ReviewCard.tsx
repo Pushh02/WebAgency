@@ -13,7 +13,7 @@ const ReviewCard = (props: {
       initial={{ translateY: 50, opacity: 0 }}
       whileInView={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 1, delay: props.d }}
-      className="bg-[#927d7d99] w-3/12 h-fit p-5 grid justify-items-stretch rounded-lg m-2"
+      className="bg-[#927d7d99] w-3/4 md:w-3/12 h-fit p-5 grid justify-items-stretch rounded-lg m-2"
     >
       <div className="text-4xl justify-self-center ">{props.Clogo}</div>
       <div className="text-2xl justify-self-center ">{props.Cname}</div>

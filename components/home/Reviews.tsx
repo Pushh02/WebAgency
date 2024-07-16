@@ -3,7 +3,7 @@ import ReviewCard from "../ui/cards/ReviewCard";
 
 const Reviews = () => {
   return (
-    <main className="w-screen h-screen overflow-x-hidden mt-4">
+    <main className="w-screen overflow-x-hidden mt-4">
       <div className="ml-8 flex gap-x-4 items-center">
         <motion.div
           initial={{ opacity: 0.5, y: -40 }}
@@ -20,7 +20,7 @@ const Reviews = () => {
           Reviews
         </motion.h2>
       </div>
-      <div className="w-full h-full flex justify-around items-center flex-wrap overflow-scroll relative">
+      <div className="w-full h-full flex-col md:flex-row flex justify-around items-center flex-wrap mt-8 relative">
         <ReviewCard
           Cname="Company Name1"
           Clogo="Company Logo"
