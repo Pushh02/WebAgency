@@ -1,35 +1,57 @@
 [
   {
-    "UI/UX design": "Our UI/UX design service focuses on creating beautiful and user-friendly websites. We make sure that every website not only looks great but is also easy to use. Our goal is to provide a smooth and enjoyable experience for your visitors, helping you attract and retain more customers. We pay attention to every detail, from the layout and colours to the way users interact with your site, ensuring a seamless experience from start to finish."
+    "title": "UI/UX design",
+    "img": "../uiux.jpg",
+    "description": "Our UI/UX design service focuses on creating beautiful and user-friendly websites. We make sure that every website not only looks great but is also easy to use. Our goal is to provide a smooth and enjoyable experience for your visitors, helping you attract and retain more customers. We pay attention to every detail, from the layout and colours to the way users interact with your site, ensuring a seamless experience from start to finish."
   },
   {
-    "Frontend/UI development": "Our Frontend/UI development service focuses on bringing your website designs to life. We create interactive and responsive websites that look great on all devices. Using the latest technologies, we ensure your site is fast, efficient, and user-friendly. Whether you need a basic webpage or a complex application, we turn your ideas into a functional and attractive online presence."
+    "title": "Frontend/UI development",
+    "img": "../uiux.jpg",
+    "description": "Our Frontend/UI development service focuses on bringing your website designs to life. We create interactive and responsive websites that look great on all devices. Using the latest technologies, we ensure your site is fast, efficient, and user-friendly. Whether you need a basic webpage or a complex application, we turn your ideas into a functional and attractive online presence."
   },
   {
-    "Backend development": "Our Backend development service ensures your website runs smoothly and efficiently behind the scenes. We build and maintain the server, database, and application logic to support your website's functionality. Whether it is managing user data, processing transactions, or integrating with other services, we make sure everything works seamlessly. Trust us to create a reliable and secure foundation for your online presence."
+    "title": "Backend development",
+    "img": "../uiux.jpg",
+    "description": "Our Backend development service ensures your website runs smoothly and efficiently behind the scenes. We build and maintain the server, database, and application logic to support your website's functionality. Whether it is managing user data, processing transactions, or integrating with other services, we make sure everything works seamlessly. Trust us to create a reliable and secure foundation for your online presence."
   },
   {
-    "SEO": "Our SEO service helps your website get noticed by search engines like Google. We use proven techniques to improve your site's ranking, making it easier for potential customers to find you. By optimizing your content, keywords, and website structure, we drive more organic traffic to your site. Let us boost your online visibility and attract more visitors with effective SEO strategies."
+    "title": "SEO",
+    "img": "../uiux.jpg",
+    "description": "Our SEO service helps your website get noticed by search engines like Google. We use proven techniques to improve your site's ranking, making it easier for potential customers to find you. By optimizing your content, keywords, and website structure, we drive more organic traffic to your site. Let us boost your online visibility and attract more visitors with effective SEO strategies."
   },
   {
-    "Website hosting and domain services": "Our Website Hosting and Domain services provide everything you need to get your website online. We help you secure a domain name that fits your brand and offer reliable hosting solutions to ensure your site is always accessible. With our service, you get fast, secure, and scalable hosting, along with seamless domain management. Trust us to keep your website up and running smoothly, so you can focus on growing your business."
+    "title": "Website hosting and domain services",
+    "img": "../uiux.jpg",
+    "description": "Our Website Hosting and Domain services provide everything you need to get your website online. We help you secure a domain name that fits your brand and offer reliable hosting solutions to ensure your site is always accessible. With our service, you get fast, secure, and scalable hosting, along with seamless domain management. Trust us to keep your website up and running smoothly, so you can focus on growing your business."
   },
   {
-    "Website maintenance & support": "Our Website Maintenance & Support service ensures your website stays up-to-date, secure, and running smoothly. We handle all the technical aspects, including updates, backups, and security checks, so you do not have to worry. Whether you need to fix a bug, add new features, or get expert advice, our team is here to help. Keep your website in top shape with our reliable maintenance and support."
+    "title": "Website maintenance & support",
+    "img": "../uiux.jpg",
+    "description": "Our Website Maintenance & Support service ensures your website stays up-to-date, secure, and running smoothly. We handle all the technical aspects, including updates, backups, and security checks, so you do not have to worry. Whether you need to fix a bug, add new features, or get expert advice, our team is here to help. Keep your website in top shape with our reliable maintenance and support."
   },
   {
-    "Machine learning": "Our Machine Learning service helps your business grow by leveraging your data with advanced machine learning models. We analyze patterns, predict outcomes, and provide valuable insights to make smarter decisions and automate processes. Enhance customer experiences, optimize operations, and innovate with new solutions using our cutting-edge machine learning expertise. Let us unlock the potential of your data to drive your business forward."
+    "title": "Machine learning",
+    "img": "../uiux.jpg",
+    "description": "Our Machine Learning service helps your business grow by leveraging your data with advanced machine learning models. We analyze patterns, predict outcomes, and provide valuable insights to make smarter decisions and automate processes. Enhance customer experiences, optimize operations, and innovate with new solutions using our cutting-edge machine learning expertise. Let us unlock the potential of your data to drive your business forward."
   },
   {
-    "Cloud Engineering": "Our Cloud Engineering service empowers your business by leveraging the flexibility and scalability of cloud platforms. We design, build, and manage cloud infrastructure that supports your applications and data. From migration to optimization, we ensure your systems are reliable, secure, and cost-effective in the cloud. Trust us to harness the power of cloud technology to enhance agility and drive innovation for your business."
+    "title": "Cloud Engineering",
+    "img": "../uiux.jpg",
+    "description": "Our Cloud Engineering service empowers your business by leveraging the flexibility and scalability of cloud platforms. We design, build, and manage cloud infrastructure that supports your applications and data. From migration to optimization, we ensure your systems are reliable, secure, and cost-effective in the cloud. Trust us to harness the power of cloud technology to enhance agility and drive innovation for your business."
   },
   {
-    "Performance optimization": "Our Performance Optimization service maximizes the speed, efficiency, and reliability of your website or application. We analyse, fine-tune, and optimize every aspect of your system—from code and server configurations to database queries and caching strategies. By improving load times and responsiveness, we enhance user experience and boost conversions. Trust us to optimize your digital presence for peak performance, ensuring a seamless and satisfying experience for your visitors."
+    "title": "Performance optimization",
+    "img": "../uiux.jpg",
+    "description": "Our Performance Optimization service maximizes the speed, efficiency, and reliability of your website or application. We analyse, fine-tune, and optimize every aspect of your system—from code and server configurations to database queries and caching strategies. By improving load times and responsiveness, we enhance user experience and boost conversions. Trust us to optimize your digital presence for peak performance, ensuring a seamless and satisfying experience for your visitors."
   },
   {
-    "Website consultancy": "Our Website Consultancy service offers expert advice and guidance to help you achieve your online goals. Whether you are planning a new website, improving an existing one, or facing technical challenges, we provide tailored solutions. From strategic planning and UX/UI design to SEO and performance optimization, we offer comprehensive insights and recommendations. Partner with us to make informed decisions and create a successful online presence."
+    "title": "Website consultancy",
+    "img": "../uiux.jpg",
+    "description": "Our Website Consultancy service offers expert advice and guidance to help you achieve your online goals. Whether you are planning a new website, improving an existing one, or facing technical challenges, we provide tailored solutions. From strategic planning and UX/UI design to SEO and performance optimization, we offer comprehensive insights and recommendations. Partner with us to make informed decisions and create a successful online presence."
   },
   {
-    "AI integration": "Enhance your business capabilities with our AI Integration service, powered by ChatGPT's API. We integrate advanced artificial intelligence into your processes and systems to automate tasks, analyze data effectively, and enhance customer interactions. From recommendation engines to natural language processing and predictive analytics, we leverage ChatGPT's API to tailor AI solutions that streamline operations and drive innovation. Embrace the future of technology with our expertise in AI integration."
+    "title":"AI integration",
+    "img": "../uiux.jpg",
+    "description": "Enhance your business capabilities with our AI Integration service, powered by ChatGPT's API. We integrate advanced artificial intelligence into your processes and systems to automate tasks, analyze data effectively, and enhance customer interactions. From recommendation engines to natural language processing and predictive analytics, we leverage ChatGPT's API to tailor AI solutions that streamline operations and drive innovation. Embrace the future of technology with our expertise in AI integration."
   }
 ]
